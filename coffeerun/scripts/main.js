@@ -1,5 +1,5 @@
 (function (window) {
-  'use strics';
+  'use strict';
   var App = window.App;
   var createTruck = App.createTruck;
   var createDataStore = App.createDataStore;
