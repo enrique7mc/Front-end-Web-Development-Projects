@@ -4,25 +4,25 @@
 
   var data = {};
 
-  function DataStore() {
+  var proto = {
+    add: function (key, val) {
+      data[key] = val;
+    },
+    get: function (key) {
+      return data[key];
+    },
+    getAll: function () {
+      return data;
+    },
+    remove: function (key) {
+      delete data[key];
+    }
   }
 
-  DataStore.prototype.add = function (key, val) {
-    data[key] = val;
-  };
+  function DataStoreFactory() {
+    return Object.create(proto);
+  }
 
-  DataStore.prototype.get = function (key) {
-    return data[key];
-  };
-
-  DataStore.prototype.getAll = function () {
-    return data;
-  };
-
-  DataStore.prototype.remove = function (key) {
-    delete data[key];
-  };
-
-  App.DataStore = DataStore;
+  App.DataStoreFactory = DataStoreFactory;
   window.App = App;
 })(window);

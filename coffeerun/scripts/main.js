@@ -2,8 +2,8 @@
   'use strics';
   var App = window.App;
   var Truck = App.Truck;
-  var DataStore = App.DataStore;
+  var DataStoreFactory = App.DataStoreFactory;
 
-  var myTruck = new Truck('ncc-1701', new DataStore());
+  var myTruck = new Truck('ncc-1701', DataStoreFactory());
   window.myTruck = myTruck;
 }(window));
