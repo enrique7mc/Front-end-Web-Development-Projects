@@ -19,10 +19,10 @@
     }
   }
 
-  function DataStoreFactory() {
+  function createDataStore() {
     return Object.create(proto);
   }
 
-  App.DataStoreFactory = DataStoreFactory;
+  App.createDataStore = createDataStore;
   window.App = App;
 })(window);
